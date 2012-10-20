@@ -6,10 +6,12 @@
     <string name="title_activity_host">HostActivity</string>
     <string name="splash_button_host">Host session</string>
     <string name="splash_button_join">Join session</string>
-    <string name="button_join">Join</string>
-    <string name="button_host">Host</string>
-    <string name="label_description">Please select wheter you like to host a discussion or rather join an existing one.</string>
+    <string name="label_description">Please select whether you like to host a discussion or rather join an existing one.</string>
     <string name="label_join">Join!</string>
+    <string name="dialog_topic_title">Choose topic</string>
+    <string name="dialog_topic_label">Topic:</string>
+    <string name="dialog_topic_hint">Please provide topic</string>
+    <string name="toast_no_topic">You have to provide a topic!</string>
     <string name="label_host">Host!</string>
 
 </resources>
