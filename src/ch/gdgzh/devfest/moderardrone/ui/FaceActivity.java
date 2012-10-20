@@ -1,7 +1,9 @@
-package ch.gdgzh.devfest.moderardrone;
+package ch.gdgzh.devfest.moderardrone.ui;
 
+import ch.gdgzh.devfest.moderardrone.R;
 import android.media.FaceDetector;
 import android.os.Bundle;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -28,6 +30,7 @@ public class FaceActivity extends Activity {
 	}
 
 	
+	@SuppressLint({ "DrawAllocation", "DrawAllocation" })
 	private class BitmapView extends View {
 
 		public BitmapView(Context context) {
