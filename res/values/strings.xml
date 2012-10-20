@@ -9,5 +9,6 @@
     <string name="label_description">Please select wheter you like to host a discussion or rather join an existing one.</string>
     <string name="label_join">Join!</string>
     <string name="label_host">Host!</string>
+    <string name="title_activity_face">FaceActivity</string>
 
 </resources>
