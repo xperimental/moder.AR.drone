@@ -13,5 +13,6 @@
     <string name="dialog_topic_hint">Please provide topic</string>
     <string name="toast_no_topic">You have to provide a topic!</string>
     <string name="label_host">Host!</string>
+    <string name="title_activity_face">FaceActivity</string>
 
 </resources>

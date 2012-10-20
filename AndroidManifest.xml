@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".ui.ClientActivity" />
         <activity android:name=".ui.HostActivity" />
+	<activity android:name=".ui.FaceActivity" />
     </application>
 
 </manifest>
