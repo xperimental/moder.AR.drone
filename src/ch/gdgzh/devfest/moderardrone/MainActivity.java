@@ -11,11 +11,6 @@ import android.view.Menu;
 import android.widget.TextView;
 
 import com.codeminders.ardrone.ARDrone;
-import com.googlecode.androidannotations.annotations.AfterViews;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.ViewById;
-
-@EActivity(R.layout.activity_main)
 public class MainActivity
     extends Activity
 {
@@ -27,8 +22,6 @@ public class MainActivity
 
 	static ARDrone drone;
 	
-    @ViewById
-    TextView hello;
 
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +33,12 @@ public class MainActivity
         super.onCreate(savedInstanceState);
 	}
 
-	@AfterViews
-    void afterViews() {
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
-    
     
     private class DroneStarter extends AsyncTask<ARDrone, Integer, Boolean> {
         
