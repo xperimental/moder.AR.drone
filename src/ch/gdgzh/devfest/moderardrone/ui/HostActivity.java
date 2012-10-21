@@ -5,12 +5,15 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 import ch.gdgzh.devfest.moderardrone.R;
+import ch.gdgzh.devfest.moderardrone.service.HostService;
+import ch.gdgzh.devfest.moderardrone.service.HostServiceConnection;
 
 public class HostActivity extends Activity {
 
     public static final String EXTRA_TOPIC = "topic";
 
     private String topic;
+    private HostServiceConnection serviceConnection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,21 @@ public class HostActivity extends Activity {
 
         TextView topicView = (TextView) findViewById(R.id.topic);
         topicView.setText(topic);
+
+        serviceConnection = new HostServiceConnection();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        HostService.bind(this, serviceConnection);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        unbindService(serviceConnection);
+    }
 }

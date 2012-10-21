@@ -1,60 +1,60 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ch.gdgzh.devfest.moderardrone"
-    android:versionCode="1"
-    android:versionName="1.0" >
+          package="ch.gdgzh.devfest.moderardrone"
+          android:versionCode="1"
+          android:versionName="1.0">
 
-	<uses-sdk
-		android:minSdkVersion="8"
-		android:targetSdkVersion="16" />
-	
-        <uses-permission android:name="android.permission.INTERNET" />
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-        <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-        <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
-        <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
-        <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-        <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-        <uses-permission android:name="android.permission.DUMP" />
-        <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
-        <uses-permission android:name="android.permission.GET_TASKS" />
-        <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
-        <uses-permission android:name="android.permission.READ_SYNC_STATS" />
-        <uses-permission android:name="android.permission.REORDER_TASKS" />
-        <uses-permission android:name="android.permission.SET_ALWAYS_FINISH" />
-        <uses-permission android:name="android.permission.SET_ANIMATION_SCALE" />
-        <uses-permission android:name="android.permission.SET_DEBUG_APP" />
-        <uses-permission android:name="android.permission.SET_PROCESS_LIMIT" />
-        <uses-permission android:name="android.permission.SIGNAL_PERSISTENT_PROCESSES" />
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-		
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16"/>
 
-	    <application
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.DUMP"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.SET_ALWAYS_FINISH"/>
+    <uses-permission android:name="android.permission.SET_ANIMATION_SCALE"/>
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"/>
+    <uses-permission android:name="android.permission.SET_PROCESS_LIMIT"/>
+    <uses-permission android:name="android.permission.SIGNAL_PERSISTENT_PROCESSES"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".ui.SplashActivity"
-            android:label="moderARdroneSplash" >
+            android:label="moderARdroneSplash">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ClientActivity" />
-        <activity android:name=".ui.HostActivity" />
-	<activity android:name=".ui.FaceActivity" />
+        <activity
+            android:name="MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.ClientActivity"/>
+        <activity android:name=".ui.HostActivity"/>
+        <activity android:name=".ui.FaceActivity"/>
+        <service android:name=".service.HostService"/>
+    </application>
 
-		<activity
-			android:name="MainActivity"
-			android:label="@string/app_name" >
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />
-			</intent-filter>
-		</activity>
-	</application>
 
-	    
 </manifest>
